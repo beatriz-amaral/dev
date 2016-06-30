@@ -1,4 +1,6 @@
 Savetyreapp::Application.routes.draw do
+
+  mount Savetyre::Engine, :at => "savetyre"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
