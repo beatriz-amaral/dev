@@ -3,6 +3,7 @@ class CreateSavetyreTyreMeasurements < ActiveRecord::Migration
   def change
     create_table :savetyre_tyre_measurements do |t|
       t.primary_key :id
+      t.integer :customer_id
       t.string :name
 
       t.timestamps

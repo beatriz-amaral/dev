@@ -4,6 +4,7 @@ class CreateSavetyreTreadModels < ActiveRecord::Migration
     create_table :savetyre_tread_models do |t|
       t.primary_key :id
       t.string :name
+      t.integer :customer_id
       t.integer :tread_brand_id
       t.integer :tread_type_id
       t.integer :number_of_grooves
