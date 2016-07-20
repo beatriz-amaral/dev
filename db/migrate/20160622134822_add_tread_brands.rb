@@ -1,14 +1,25 @@
 class AddTreadBrands < ActiveRecord::Migration
   def up
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Indefinido',3,now(),now());"
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('RecMaxx',3,now(),now());"
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Goodyear',3,now(),now());"
+    execute <<-SQL
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('INDEFINIDO',3,now(),now());
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('RecMaxx',3,now(),now());
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Goodyear',3,now(),now());
 
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Indefinido',4,now(),now());"
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('RecMaxx',4,now(),now());"
-    execute "INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Goodyear',4,now(),now());"
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('INDEFINIDO',4,now(),now());
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('RecMaxx',4,now(),now());
+      INSERT INTO savetyre_tread_brands (name,customer_id,created_at,updated_at) VALUES ('Goodyear',4,now(),now());
+    SQL
   end
 
   def down
+    execute <<-SQL
+      DELETE FROM savetyre_tread_brands WHERE name = 'INDEFINIDO' and customer_id = 3;
+      DELETE FROM savetyre_tread_brands WHERE name = 'RecMaxx' and customer_id = 3;
+      DELETE FROM savetyre_tread_brands WHERE name = 'Goodyear' and customer_id = 3;
+
+      DELETE FROM savetyre_tread_brands WHERE name = 'INDEFINIDO' and customer_id = 3;
+      DELETE FROM savetyre_tread_brands WHERE name = 'RecMaxx' and customer_id = 3;
+      DELETE FROM savetyre_tread_brands WHERE name = 'Goodyear' and customer_id = 3;
+    SQL
   end
 end

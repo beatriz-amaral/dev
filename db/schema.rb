@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160628164343) do
+ActiveRecord::Schema.define(:version => 20160720133557) do
 
   create_table "savetyre_name_pos_tyres", :force => true do |t|
     t.string   "short_name"
@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(:version => 20160628164343) do
   end
 
   create_table "savetyre_tread_brands", :force => true do |t|
+    t.integer  "customer_id"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "savetyre_tread_model_depths", :force => true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20160628164343) do
 
   create_table "savetyre_tread_models", :force => true do |t|
     t.string   "name"
+    t.integer  "customer_id"
     t.integer  "tread_brand_id"
     t.integer  "tread_type_id"
     t.integer  "number_of_grooves"
@@ -88,13 +90,15 @@ ActiveRecord::Schema.define(:version => 20160628164343) do
   end
 
   create_table "savetyre_tyre_measurements", :force => true do |t|
+    t.integer  "customer_id"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "savetyre_tyre_models", :force => true do |t|
     t.string   "name"
+    t.integer  "customer_id"
     t.integer  "tyre_brand_id"
     t.integer  "number_of_grooves"
     t.float    "recommended_pressure"
