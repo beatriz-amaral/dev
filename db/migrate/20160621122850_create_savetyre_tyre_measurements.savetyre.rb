@@ -4,7 +4,7 @@ class CreateSavetyreTyreMeasurements < ActiveRecord::Migration
     create_table :savetyre_tyre_measurements do |t|
       t.primary_key :id
       t.integer :customer_id
-      t.string :name
+      t.string :name, :limit => 50
 
       t.timestamps
     end

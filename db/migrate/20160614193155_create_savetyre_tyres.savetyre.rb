@@ -1,12 +1,11 @@
-# This migration comes from savetyre (originally 20160614192742)
+# This migration comes from savetyre (originally 20160623124912)
 class CreateSavetyreTyres < ActiveRecord::Migration
   def change
-
     create_table :savetyre_tyres do |t|
       t.primary_key :id
       t.integer :customer_id
-      t.string :fire_mark
-      t.string :rf_id
+      t.string :fire_mark, :limit => 15
+      t.string :rf_id, :limit => 15
       t.integer :name_pos_tyre_id
       t.integer :tyre_model_id
       t.integer :tread_model_id

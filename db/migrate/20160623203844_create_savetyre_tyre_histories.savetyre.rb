@@ -7,8 +7,8 @@ class CreateSavetyreTyreHistories < ActiveRecord::Migration
       t.integer :customer_id
       t.integer :operator_id
       t.integer :operation_id
-      t.string :fire_mark
-      t.string :rf_id
+      t.string :fire_mark, :limit => 15
+      t.string :rf_id, :limit => 15
       t.integer :name_pos_tyre_id
       t.integer :tyre_model_id
       t.integer :tread_model_id
@@ -26,9 +26,9 @@ class CreateSavetyreTyreHistories < ActiveRecord::Migration
       t.integer :number_of_grooves
       t.float :recommended_pressure
       t.integer :vehicle_id
-      t.string :mac_antenna
-      t.string :mac_smartphone
-      t.string :mac_mps
+      t.string :mac_antenna, :limit => 100
+      t.string :mac_smartphone, :limit => 100
+      t.string :mac_mps, :limit => 100
       t.integer :medidor
 
       t.timestamps

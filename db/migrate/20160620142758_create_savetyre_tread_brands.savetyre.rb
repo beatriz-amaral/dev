@@ -4,7 +4,7 @@ class CreateSavetyreTreadBrands < ActiveRecord::Migration
     create_table :savetyre_tread_brands do |t|
       t.primary_key :id
       t.integer :customer_id
-      t.string :name
+      t.string :name, :limit => 50
 
       t.timestamps
     end
