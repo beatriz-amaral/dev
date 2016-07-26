@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160721112835) do
+ActiveRecord::Schema.define(:version => 20160726181807) do
+
+  create_table "savetyre_entities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "savetyre_name_pos_tyres", :force => true do |t|
     t.string   "short_name", :limit => 10
@@ -22,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20160721112835) do
 
   add_index "savetyre_name_pos_tyres", ["full_name"], :name => "index_savetyre_name_pos_tyres_on_full_name"
   add_index "savetyre_name_pos_tyres", ["short_name"], :name => "index_savetyre_name_pos_tyres_on_short_name"
+
+  create_table "savetyre_operations", :force => true do |t|
+    t.integer  "entity_id"
+    t.string   "short_name"
+    t.string   "full_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "savetyre_tread_brands", :force => true do |t|
     t.integer  "customer_id"
@@ -73,6 +87,14 @@ ActiveRecord::Schema.define(:version => 20160721112835) do
   end
 
   add_index "savetyre_tyre_brands", ["name"], :name => "index_savetyre_tyre_brands_on_name"
+
+  create_table "savetyre_tyre_groove_histories", :force => true do |t|
+    t.integer  "tyre_history_id"
+    t.integer  "groove"
+    t.float    "depth"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "savetyre_tyre_histories", :force => true do |t|
     t.integer  "tyre_id"
