@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160726181807) do
+ActiveRecord::Schema.define(:version => 20160825140455) do
 
   create_table "savetyre_entities", :force => true do |t|
     t.string   "name"
@@ -196,5 +196,37 @@ ActiveRecord::Schema.define(:version => 20160726181807) do
 
   add_index "savetyre_tyres", ["customer_id"], :name => "index_savetyre_tyres_on_customer_id"
   add_index "savetyre_tyres", ["fire_mark"], :name => "index_savetyre_tyres_on_fire_mark"
+
+  create_table "savetyre_vehicle_histories", :force => true do |t|
+    t.integer  "vehicle_id"
+    t.integer  "operator_id"
+    t.integer  "operation_id"
+    t.integer  "vehicle_type_id"
+    t.string   "mac_antenna"
+    t.string   "mac_smartphone"
+    t.string   "plate_number"
+    t.string   "fleet"
+    t.integer  "km"
+    t.text     "observation"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "customer_id"
+  end
+
+  create_table "savetyre_vehicle_tyre_histories", :force => true do |t|
+    t.integer  "vehicle_history_id"
+    t.integer  "tyre_history_id"
+    t.integer  "customer_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "savetyre_vehicle_tyres", :force => true do |t|
+    t.integer  "vehicle_id"
+    t.integer  "tyre_id"
+    t.integer  "customer_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

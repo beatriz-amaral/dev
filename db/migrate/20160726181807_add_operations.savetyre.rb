@@ -8,7 +8,7 @@ class AddOperations < ActiveRecord::Migration
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'DESMONTAGEM', 'PNEU_DESMONTADO_NO_SITEMA',now(),now());
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'MONTAGEM_EST', 'PNEU_MONTADO_COMO_ESTEPE',now(),now());
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'DESMONT_EST', 'PNEU_DESMONTADO_COMO_ESTEPE',now(),now());
-      insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'IDENTIFICAÇÃO', 'PNEU_IDENTIFICADO_NO_SISTEMA',now(),now());
+      insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'IDENTIFICACAO', 'PNEU_IDENTIFICADO_NO_SISTEMA',now(),now());
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'TROCA_ENTRADA', 'PNEU_MONTADO_NO_VEICULO',now(),now());
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'TROCA_SAIDA', 'PNEU_RETIRADO_DO_VEICULO',now(),now());
       insert into savetyre_operations (entity_id, short_name, full_name, created_at, updated_at) values ( 1, 'RODIZIO', 'PNEU_MOVIMENTADO_ENTRE_POSICOES_NO_VEICULO',now(),now());

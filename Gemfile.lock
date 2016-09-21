@@ -1,7 +1,9 @@
 PATH
-  remote: /home/felipetortella/project-webradar-sv/savetyre
+  remote: /home/felipetortella/git-engine-sv
   specs:
     savetyre (0.0.1)
+      activerecord
+      activerecord-import (>= 0.2.0)
       rails (~> 3.2.22)
 
 GEM
@@ -28,6 +30,8 @@ GEM
       activesupport (= 3.2.22)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-import (0.15.0)
+      activerecord (>= 3.2)
     activeresource (3.2.22)
       activemodel (= 3.2.22)
       activesupport (= 3.2.22)

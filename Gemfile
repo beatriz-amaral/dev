@@ -7,7 +7,7 @@ gem 'rails', '3.2.22'
 
 gem 'pg'
 
-gem 'savetyre', :path => "/home/felipetortella/project-webradar-sv/savetyre"
+gem 'savetyre', :path => "/home/felipetortella/git-engine-sv"
 
 
 # Gems used only for assets and not required
