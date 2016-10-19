@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160825140455) do
+ActiveRecord::Schema.define(:version => 20160922135314) do
 
   create_table "savetyre_entities", :force => true do |t|
     t.string   "name"
@@ -211,6 +211,17 @@ ActiveRecord::Schema.define(:version => 20160825140455) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "customer_id"
+  end
+
+  create_table "savetyre_vehicle_type_draws", :force => true do |t|
+    t.integer  "vehicle_type_id"
+    t.integer  "axis"
+    t.integer  "axis_draw"
+    t.integer  "aliginment"
+    t.integer  "tyre_position"
+    t.integer  "name_pos_tyre_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "savetyre_vehicle_tyre_histories", :force => true do |t|
