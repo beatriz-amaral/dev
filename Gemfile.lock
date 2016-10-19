@@ -1,5 +1,5 @@
 PATH
-  remote: /home/felipetortella/project-webradar-sv/savetyre
+  remote: /home/felipetortella/WebRadar/git-engine-sv
   specs:
     savetyre (0.0.1)
       rails (~> 3.2.22)
